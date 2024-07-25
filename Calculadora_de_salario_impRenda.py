@@ -23,3 +23,15 @@ elif salarioBrutoMes < 4.664:
 
 elif salarioBrutoMes > 4.664:
     impostoRenda = salarioBrutoMes * 0.275 - 884.96
+    
+    salarioLiquido = salarioBrutoMes - inss - sindicato - impostoRenda #Calculando salário liquido
+
+#Imprimindo credito de descontos
+print("Desconto de INSS: {}".format(inss))
+print("Desconto de Sindicato: {}".format(sindicato))
+print("Desconto de Imposto de renda: {:.2f}".format(impostoRenda))
+
+#Imprimindo salario liquido
+print("Seu salário liquido é de: {:.2f}".format(salarioLiquido-inss-sindicato))
+
+input("Pressione enter para sair (ENTER)")
